@@ -1,14 +1,15 @@
-package eu.buzea.fiabilitate.programelor.sese;
+package eu.buzea.fiabilitate.programelor.graph;
 
 public class Edge {
 
-	private final Node source;
-	private final Node target;
+	private final Node	source;
+	private final Node	target;
 
 	public Edge(Node source, Node target) {
-		super();
 		this.source = source;
 		this.target = target;
+		source.getOutgoingEdges().add(this);
+		target.getIncomingEdges().add(this);
 	}
 
 	public Node getSource() {
@@ -35,26 +36,31 @@ public class Edge {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		Edge other = (Edge) obj;
 		if (source == null) {
-			if (other.source != null)
+			if (other.source != null) {
 				return false;
-		} else if (!source.equals(other.source))
+			}
+		} else if (!source.equals(other.source)) {
 			return false;
+		}
 		if (target == null) {
-			if (other.target != null)
+			if (other.target != null) {
 				return false;
-		} else if (!target.equals(other.target))
+			}
+		} else if (!target.equals(other.target)) {
 			return false;
+		}
 		return true;
 	}
-	
-	
 
 }
