@@ -1,13 +1,13 @@
-package eu.buzea.fiabilitate.programelor;
+package eu.buzea.fiabilitatea.programelor;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import eu.buzea.fiabilitate.programelor.graph.Edge;
-import eu.buzea.fiabilitate.programelor.graph.Graph;
-import eu.buzea.fiabilitate.programelor.graph.Node;
+import eu.buzea.fiabilitatea.programelor.graph.Edge;
+import eu.buzea.fiabilitatea.programelor.graph.Graph;
+import eu.buzea.fiabilitatea.programelor.graph.Node;
 
 public class GraphReader {
 	public static final Pattern	EDGE_PATTERN	= Pattern.compile("(\\d+) (\\d+)");

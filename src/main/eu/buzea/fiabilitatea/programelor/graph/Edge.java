@@ -1,4 +1,4 @@
-package eu.buzea.fiabilitate.programelor.graph;
+package eu.buzea.fiabilitatea.programelor.graph;
 
 public class Edge {
 
